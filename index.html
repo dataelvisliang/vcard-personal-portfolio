@@ -637,7 +637,7 @@
 
           <ul class="blog-posts-list">
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-blog-item>
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -651,21 +651,44 @@
 
                     <span class="dot"></span>
 
-                    <time datetime="2024-11-15">Nov 15, 2024</time>
+                    <time datetime="2026-01-05">Jan 05, 2026</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">LLM Evaluation Is a Product Problem</h3>
+                  <h3 class="h3 blog-item-title" data-blog-title>LLM Evaluation Is a Product Problem</h3>
 
                   <p class="blog-text">
-                    Why model quality metrics alone are not enough.
+                    Evaluation shouldn't just be about model benchmarks; it’s about measuring how AI fits into the user
+                    journey. We need to shift from "model quality" to "task success" and understand how model failures
+                    directly impact user trust and product retention.
                   </p>
+
+                  <div class="full-content" style="display: none;" data-blog-text>
+                    <p>In the world of Large Language Models, we often get caught up in technical benchmarks like MMLU
+                      or GSM8K. While these are useful for comparing base models, they are poor predictors of product
+                      success. In production, LLM evaluation isn't just a technical hurdle—it's a product problem.</p>
+                    <p>When an LLM is integrated into a product, its value is determined by how well it fulfills user
+                      intent. Traditional NLP metrics like ROUGE or BLEU, which measure word overlap, fail to capture
+                      semantic nuances. A model can stay "on topic" but completely fail to be helpful. This is why we
+                      must shift our focus from "model quality" to "task success."</p>
+                    <p>A product-centric evaluation framework should prioritize:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; list-style-type: disc;">
+                      <li style="margin-bottom: 5px;"><strong>Alignment with User Journeys:</strong> Does the model's
+                        response move the user closer to their goal?</li>
+                      <li style="margin-bottom: 5px;"><strong>Impact of Failure:</strong> Not all hallucinations are
+                        equal. A minor factual error is different from a safety violation or a broken product flow.</li>
+                      <li style="margin-bottom: 5px;"><strong>User Trust and Retention:</strong> Measuring how model
+                        variability affects long-term user behavior.</li>
+                    </ul>
+                    <p>Ultimately, if you can't measure how an LLM affects your product metrics, you aren't evaluating
+                      the AI—you're just reading a leaderboard.</p>
+                  </div>
 
                 </div>
 
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-blog-item>
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -679,21 +702,46 @@
 
                     <span class="dot"></span>
 
-                    <time datetime="2024-10-08">Oct 08, 2024</time>
+                    <time datetime="2025-12-12">Dec 12, 2025</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Analyzing AI as a System, Not a Model</h3>
+                  <h3 class="h3 blog-item-title" data-blog-title>Analyzing AI as a System, Not a Model</h3>
 
                   <p class="blog-text">
-                    A framework for thinking about users, prompts, retrieval, and responses together.
+                    Modern AI products are complex systems involving RAG, prompt engineering, and UI constraints. True
+                    analysis requires looking beyond the LLM output to evaluate the entire pipeline, identifying whether
+                    failures stem from retrieval gaps, model reasoning, or prompt ambiguity.
                   </p>
+
+                  <div class="full-content" style="display: none;" data-blog-text>
+                    <p>One of the most common mistakes in AI development is treating the Large Language Model as the
+                      entire system. In reality, modern AI products—especially those using Retrieval-Augmented
+                      Generation (RAG)—are complex pipelines where the LLM is just one component.</p>
+                    <p>To truly analyze performance, we must look at the system holistically. A failure in the final
+                      response could be due to a poor prompt, but it's just as likely to be a failure in document
+                      chunking, embedding retrieval, or metadata filtering. If you only evaluate the "generation" step,
+                      you are flying blind.</p>
+                    <p>Effective system analysis requires disentangling these layers:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; list-style-type: disc;">
+                      <li style="margin-bottom: 5px;"><strong>Retrieval Utility:</strong> Are the fetched documents
+                        actually relevant to the query?</li>
+                      <li style="margin-bottom: 5px;"><strong>Faithfulness:</strong> Is the response grounded in the
+                        retrieved context, or is the model "hallucinating" from its training data?</li>
+                      <li style="margin-bottom: 5px;"><strong>System Latency and Cost:</strong> Analyzing how each step
+                        in the pipeline contributes to the overall user experience and operational overhead.</li>
+                    </ul>
+                    <p>By using frameworks like RAGAs or DeepEval, we can assign specific scores to retrieval vs.
+                      generation. This allows teams to optimize the right bottleneck—whether that's upgrading the vector
+                      database or refining the prompt—rather than blindly switching to a larger, more expensive model.
+                    </p>
+                  </div>
 
                 </div>
 
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item" data-blog-item>
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -708,14 +756,40 @@
 
                     <span class="dot"></span>
 
-                    <time datetime="2024-09-20">Sep 20, 2024</time>
+                    <time datetime="2025-11-15">Nov 15, 2025</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">What Traditional Analytics Can Teach Us About LLMs</h3>
+                  <h3 class="h3 blog-item-title" data-blog-title>What Traditional Analytics Can Teach Us About LLMs</h3>
 
                   <p class="blog-text">
-                    Applying behavioral analysis and experimentation to AI products.
+                    Applying behavioral analytics to AI interactions allows us to treat conversation turns like product
+                    funnels. By measuring session progression and "user intent shifts," we can quantify the value of an
+                    LLM through the same rigorous lens we use for traditional software products.
                   </p>
+
+                  <div class="full-content" style="display: none;" data-blog-text>
+                    <p>The "magical" nature of LLMs often leads teams to believe that traditional product analytics no
+                      longer apply. This is a misconception. While the inputs (natural language) are unstructured, the
+                      user behavior remains measurable and predictable through a rigorous analytical lens.</p>
+                    <p>We can adapt classic product analytics concepts to the AI era to gain deeper insights. For
+                      instance, the multi-turn conversation shouldn't be viewed as a single "event," but as a
+                      <strong>conversational funnel</strong>. Each turn is a step where a user can either reach their
+                      "Aha!" moment or drop off in frustration.
+                    </p>
+                    <p>Key traditional concepts adapted for LLMs include:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; list-style-type: disc;">
+                      <li style="margin-bottom: 5px;"><strong>User Intent Shifts:</strong> Instead of tracking page
+                        views, we track when a user refines their query or switches topics. This tells us where the
+                        model failed to meet the initial intent.</li>
+                      <li style="margin-bottom: 5px;"><strong>User Acceptance Rate (UAR):</strong> Treat "accepted" AI
+                        suggestions (like code completions or summarized points) like a Click-Through Rate (CTR). High
+                        UAR indicates high value.</li>
+                      <li style="margin-bottom: 5px;"><strong>Edit Distance:</strong> Measuring how much a user has to
+                        modify an AI-generated output. This is a direct signal of the model's "near-miss" quality.</li>
+                    </ul>
+                    <p>By treating AI interactions as behavioral data, we move away from vibes-based development and
+                      toward data-driven product decisions that actually improve the user experience.</p>
+                  </div>
 
                 </div>
 
@@ -789,6 +863,22 @@
 
 
 
+
+  <div class="overlay" data-overlay></div>
+
+  <div class="modal-container" data-modal-container>
+    <div class="testimonials-modal">
+      <button class="modal-close-btn" data-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-content">
+        <h3 class="h3 modal-title" data-modal-title></h3>
+        <time data-modal-date></time>
+        <div class="blog-text" data-modal-text></div>
+      </div>
+    </div>
+  </div>
 
   <!--
     - custom js link

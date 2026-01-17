@@ -719,6 +719,24 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  margin-bottom: 15px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
+
+.modal-content li {
+  margin-left: 20px;
+  margin-bottom: 8px;
+  display: list-item;
+}
+
+.modal-content strong {
+  color: var(--white-1);
 }
 
 
